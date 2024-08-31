@@ -29,19 +29,19 @@
 
 @keyframes animatedBackground {
   0% {
-    transform: perspective(200px) translate3d(0px, 0px, 0px);
+    transform: translate(0px, 0px);
   }
 
   33% {
-    transform: perspective(200px) translate3d(-50px, 12px, 12px);
+    transform: translate(-50px, 12px);
   }
 
   66% {
-    transform: perspective(200px) translate3d(50px, -25px, 25px);
+    transform: translate(25px, -12px);
   }
 
   99% {
-    transform: perspective(200px) translate3d(0px, 0px, 0px);
+    transform: translate(0px, 0px);
   }
 }
 
