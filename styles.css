@@ -1,9 +1,9 @@
 .home-page__bg {
   position: absolute;
-  left: -100;
-  right: -100;
-  top: -100;
-  bottom: 0;
+  left: 2;
+  right: 2;
+  top: 2;
+  bottom: 2;
   z-index: -1;
   animation: animatedBackground 15s linear infinite;
   display: flex;
@@ -29,29 +29,29 @@
 
 @keyframes animatedBackground {
   0% {
-    transform: translate(0px, 0px);
+    transform: translateX(0px);
   }
 
   33% {
-    transform: translate(-50px, 12px);
+    transform: translateX(-50px);
   }
 
   66% {
-    transform: translate(25px, -12px);
+    transform: translateX(50px);
   }
 
   99% {
-    transform: translate(0px, 0px);
+    transform: translateX(0px);
   }
 }
 
 @media (min-width: 768px) {
   .home-page__bg {
     position: absolute;
-    left: -100;
-    right: -100;
-    top: -100;
-    bottom: 0;
+    left: 2;
+    right: 2;
+    top: 2;
+    bottom: 2;
     z-index: -1;
     animation: animatedBackground 15s linear infinite;
     display: flex;
@@ -62,7 +62,7 @@
     /* https://www.miriamsuzanne.com/2022/10/21/the-conic/ */
     --c1: #fef08a; /* color 1*/
     --c2: #4338ca; /* color 2*/
-    --s: 150px; /* the size */
+    --s: 100px; /* the size */
 
     --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%,
       var(--c2) 26% 35%, var(--c1) 36% 45%, var(--c2) 46% 55%, var(--c1) 56% 65%,
@@ -77,15 +77,23 @@
 
   @keyframes animatedBackground {
     0% {
-      transform: perspective(500px) translate3d(0px, 0px, 0px);
+      transform: perspective(200px) translate3d(0px, 0px, 0px);
     }
 
-    33% {
-      transform: perspective(500px) translate3d(-100px, 25px, 25px);
+    20% {
+      transform: perspective(600px) translate3d(50px, 25px, 25px);
     }
 
-    66% {
-      transform: perspective(500px) translate3d(200px, -50px, 50px);
+    40% {
+      transform: perspective(800px) translate3d(0px, 0px, 0px);
+    }
+
+    60% {
+      transform: perspective(600px) translate3d(-50px, -25px, -25px);
+    }
+
+    80% {
+      transform: perspective(300px) translate3d(-10px, -5px, -5px);
     }
 
     99% {

@@ -590,6 +590,14 @@ html {
   z-index: -1;
 }
 
+.z-\[2\] {
+  z-index: 2;
+}
+
+.z-\[200\] {
+  z-index: 200;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -598,6 +606,14 @@ html {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.mt-\[-5px\] {
+  margin-top: -5px;
+}
+
+.mb-\[-5px\] {
+  margin-bottom: -5px;
 }
 
 .flex {
@@ -616,8 +632,28 @@ html {
   height: 3rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-20 {
   height: 5rem;
+}
+
+.h-\[250px\] {
+  height: 250px;
+}
+
+.h-\[255px\] {
+  height: 255px;
+}
+
+.h-\[245px\] {
+  height: 245px;
+}
+
+.h-\[10px\] {
+  height: 10px;
 }
 
 .min-h-screen {
@@ -708,12 +744,17 @@ html {
   border-width: 1px;
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .pb-6 {
