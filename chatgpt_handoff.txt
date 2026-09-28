@@ -1,0 +1,183 @@
+Yes. I’d give Codex enough context that it can build the resume without having to rediscover all the decisions we made. You can paste this directly:
+
+I’m putting together a resume targeted at a Golang Developer position at Xona Systems. I have the Xona job posting available in my ChatGPT Resume project. Please use it as the primary target for the resume, but do not exaggerate my Go experience or invent accomplishments, metrics, dates, employers, or technologies I haven’t provided.
+
+### Positioning
+
+I’m an experienced, hands-on software engineer who also architects and leads projects. I do not want the resume to make me sound like I’ve moved from development into management. I lead while developing and still write a lot of production code.
+
+I began my career in the U.S. Army in 2001. I started programming in grad school as part of my thesis and have been developing software professionally since 2013. I’ve worked at my current software agency, Objective, since 2017, apart from a sabbatical in 2020 when I worked on a friend’s startup and traveled.
+
+My current title is Senior Developer.
+
+I have extensive experience with both greenfield projects and brownfield/legacy applications and am equally comfortable with both.
+
+### Primary technical expertise
+
+TypeScript and Elixir/Phoenix are my two strongest ecosystems. Treat them as peers. I am an expert in both.
+
+TypeScript:
+- Backend and frontend
+- React
+- React Native
+- Next.js
+- TanStack
+- Hono
+- Express
+
+Elixir:
+- Expert
+- Extensive Phoenix experience
+
+Other languages:
+- Ruby/Rails: highly experienced, although it is not a language I particularly enjoy
+- Go: roughly 3/5
+- Python: used substantially in grad school
+- Mobile work has included small amounts of Java, Kotlin, Swift, and Objective-C
+
+Databases:
+- Expert SQL
+- Expert PostgreSQL
+- Highly proficient with MySQL, SQLite, and MongoDB
+
+### Go
+
+I’m enthusiastic about working professionally in Go.
+
+I did a substantial deep dive into Go about a year ago and evaluated whether we should adopt it at Objective. I ultimately decided it was not the best fit for our agency.
+
+The reasons were primarily practical:
+- Everyone on our team already knows TypeScript.
+- We need to start projects and become productive very quickly.
+- Node/TypeScript generally has much broader availability of official third-party SDKs.
+- The Go web ecosystem lacks equivalents to some productivity tooling we rely on, such as Better Auth or Phoenix authentication generators.
+- TypeScript, Elixir, and Python have larger ecosystems for the type of web development our agency does.
+
+The decision was not because I disliked Go. I came away liking it considerably. I particularly appreciate its simplicity, type system, performance, small surface area, and straightforward tooling.
+
+My engineering philosophy generally favors simplicity, maintainability, minimal dependencies, and Unix-style composition, so Go appeals to me.
+
+Do not imply that I have professional production Go experience that I do not have. Xona's posting asks for 5+ years of Go, and that is the largest gap between my background and the posting.
+
+### Current responsibilities
+
+At Objective, I architect and lead projects while continuing to develop.
+
+My work includes:
+- Working directly with clients to understand their businesses and requirements
+- Business process modeling, which is a particular strength and interest of mine
+- Translating business processes into software
+- Choosing technical architectures and technologies
+- Writing PRDs and technical specifications
+- Breaking projects into phases
+- Creating and assigning development tasks
+- Developing production code myself
+- Working with developers on task-level technical solutions
+- Reviewing pull requests
+- Technical project management
+- Adjusting requirements, priorities, and specifications as development progresses
+- Debugging complex application and production problems
+
+I want the resume to communicate that I can understand a business problem, architect an appropriate solution, and then lead the implementation while actively developing alongside the team.
+
+### Architecture and infrastructure
+
+I have extensive experience designing, deploying, and maintaining cloud infrastructure, primarily on AWS, Cloudflare, and Vercel.
+
+AWS experience includes:
+- VPCs
+- Networking
+- Private subnets
+- Security Groups
+- RDS
+- EC2
+- ECS Fargate
+- S3
+- Docker
+- Infrastructure as Code using CloudFormation
+
+This is more than simply deploying applications to a VPS. I have designed application infrastructure and networking.
+
+### Authentication and security
+
+Experience includes:
+- SSO
+- MFA
+- OTP
+- OAuth
+- Okta
+- Active Directory
+- API and web security best practices
+- Private subnets
+- Security groups
+- TLS/HTTPS certificate creation and configuration
+
+Do not characterize me as a cryptography or TLS protocol expert. My TLS experience is practical web/infrastructure experience, including creating and configuring certificates for HTTPS.
+
+### Systems
+
+I have substantial practical Linux/system administration experience:
+- Ubuntu
+- SSH
+- Linux server configuration
+- Infrastructure configuration through IaC
+- Inspecting/grepping logs
+- Debugging server problems
+- Debugging application and server performance issues
+- Production troubleshooting
+
+### Testing and development practices
+
+Extensive experience with:
+- Unit testing
+- Integration testing
+- CI/CD
+- GitHub Actions
+- Other CI/CD systems
+- GitHub organization administration
+- Code review
+
+Project management:
+- Extensive experience with Teamwork
+- Limited Jira experience
+- Do not imply extensive Jira expertise
+
+### LLM-assisted development
+
+Over the last year I’ve integrated LLM-assisted development heavily into my workflow. It has dramatically increased my capacity and throughput. Include this where appropriate without making the resume sound AI-centric.
+
+### Tone and style
+
+I want a technically credible senior-engineer resume, not corporate jargon.
+
+Keep it concise.
+No em dashes.
+Avoid buzzword-heavy language.
+Prefer concrete descriptions of what I actually do.
+Do not make me sound primarily like a manager.
+Do not oversell Go.
+Do not invent metrics to make bullets sound more impressive.
+Do not invent missing details. Use placeholders or ask me for them.
+
+The opening positioning we developed was approximately:
+
+“I’m a software engineer specializing in full-stack development, system architecture, and technical project leadership. I began my career in the U.S. Army in 2001 and transitioned into software development while in grad school. I’ve been developing software professionally since 2013 and have worked at my current software agency since 2017, with a brief sabbatical in 2020 to work on a friend’s startup and travel. My experience spans greenfield development and complex legacy systems, and I’m equally comfortable building something new or working within an established codebase.”
+
+You do not need to use that verbatim, but preserve the positioning.
+
+### Next step
+
+Start by reviewing the Xona job posting and this background. Then create a strong first-pass resume targeted to the position.
+
+Where possible, identify places where specific project examples would make the resume stronger and ask me for the missing details rather than inventing them. In particular, we should eventually add concrete examples that demonstrate:
+- Elixir/Phoenix backend development
+- TypeScript/React development
+- AWS architecture
+- Authentication/security
+- Linux/production troubleshooting
+- CI/CD
+- Complex business process modeling and systems integration
+
+The resume should make the case through my broader engineering depth, systems experience, full-stack experience, and ability to become productive in Go, while being completely transparent about the fact that I do not have the 5+ years of Go production experience requested in the posting.
+
+That should give Codex essentially the full state of our resume discussion, including the important nuance around Go and the fact that you're **leading while developing**, not transitioning away from engineering.

@@ -1,79 +1,163 @@
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cameron Carlyle</title>
-    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cameron Carlyle is a senior software engineer in Fayetteville, West Virginia. I build web applications, modernize complex systems, and climb rocks.">
+    <meta name="theme-color" content="#252936">
+    <title>Cameron Carlyle — Software engineer &amp; climber</title>
+    <link rel="preload" href="fonts/roboto-slab-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/roboto-latin-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="tw.css">
 </head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page">
+        <main id="main">
+            <section class="hero" aria-labelledby="intro">
+                <div class="cam-mark" aria-hidden="true">
+                    <div class="cam-mark__colors"></div>
+                    <img src="cam.svg" width="300" height="100" alt="" fetchpriority="high">
+                </div>
+                <div class="hero-copy">
+                <h1 id="intro">Hi, I’m Cam. I climb &amp; <span>build apps.</span></h1>
+                <p class="eyebrow">Senior Software Engineer / Fayetteville, WV</p>
+                <div class="hero-bottom">
+                    <p>I turn complex business problems into software people can use and teams can maintain. From the first conversation to production, I design the systems and write the code.</p>
+                    <nav class="hero-links" aria-label="Explore and get in touch">
+                        <a href="#work">Work</a>
+                        <a href="#about-me">Approach</a>
+                        <a href="cameron-carlyle-resume.pdf" download>Résumé <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a>
+                        <a href="mailto:carlyleec@gmail.com">Let’s talk <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+                    </nav>
+                </div>
+                </div>
+            </section>
 
-<body class="!scroll-smooth">
-    <div class="min-h-screen pb-6 flex flex-grow flex-col justify-center items-center space-y-2">
-        <div class="relative w-full flex flex-grow flex-col overflow-hidden justify-center items-center">
-            <div class=" h-[10px] w-full"></div>
-            <div class="relative w-full z-[-1] overflow-hidden" style="transform-style: preserve-3d;">
-                <div class="home-page__bg"></div>
-                <img class="flex flex-1 w-full z-[200] justify-center items-center background=[#c6d0f5]" src="cam.svg"
-                    alt="">
-            </div>
-            <div class="h-[10px] w-full mt-[-5px]"></div>
-        </div>
-        <p class="text-xl md:text-2xl my-4 text-[#c6d0f5] font-bold  h-12 text-center">Hi 👋, I'm Cam. I climb and
-            build
-            apps.</p>
-        <div class="h-16 w-full flex justify-center items-center">
-            <a href="#about-me" id="scroll-down"
-                class=" inline-flex items-center justify-center whitespace-nowrap text-2xl my-4 text-[#c6d0f5]  h-12 w-12 animate-bounce border rounded-full shadow-md hover:shadow-xl transition-all duration-30">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
+            <section id="work" class="section" aria-labelledby="work-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Selected work</p>
+                    <h2 id="work-title">New systems.<br>Real-world constraints.</h2>
+                    <p>Recent work at Objective, through September 2026. Client names omitted; both broader migrations are still underway.</p>
+                </div>
+                <div class="projects">
+                    <article class="project">
+                        <p class="eyebrow">Enterprise ordering / 2026</p>
+                        <h3>Rebuilding around the business rules</h3>
+                        <p>An ordering platform connected customer purchases to fulfillment and accounting in SAP. Replacing it meant untangling regional pricing, purchasing constraints, and delivery schedules without losing the rules that kept it running.</p>
+                        <p>I developed the architecture and phased delivery plans, built customer and admin APIs and interfaces, and created parallel AWS infrastructure for the migration.</p>
+                        <ul class="outcomes">
+                            <li>Normalized pricing into the units customers buy, preserving historical order data.</li>
+                            <li>Built an order-event log and processing locks while keeping legacy status fields compatible.</li>
+                            <li>Aligned interfaces with OpenAPI contracts, generated types, and automated checks.</li>
+                        </ul>
+                        <details>
+                            <summary>More about the migration</summary>
+                            <div class="detail-content">
+                                <p>I traced existing workflows and turned them into reviewable features, revising the plan as implementation revealed hidden dependencies. Shared user records preserved relationships and employee roles, with separate customer and administrator access boundaries.</p>
+                                <p>The infrastructure work moved toward a consolidated Phoenix application on ECS, with GitHub Actions for delivery. New interfaces, APIs, infrastructure, and parts of the processing workflow were implemented by September. Queue handover, processing ownership, rollback observation, and the wider cutover remained part of the ongoing migration.</p>
+                            </div>
+                        </details>
+                        <p class="stack">Elixir / Phoenix / TypeScript / PostgreSQL / AWS</p>
+                    </article>
+                    <article class="project">
+                        <p class="eyebrow">Insurance &amp; payments / 2026</p>
+                        <h3>Modernizing one reliable step at a time</h3>
+                        <p>Quotes, payments, signatures, and policy creation had to stay coordinated while a Rails application was being replaced—even when events arrived out of order or processing stopped halfway through.</p>
+                        <p>I extracted payment integrations into TypeScript services and built React checkout flows, using feature flags and Rails API clients to support incremental rollout.</p>
+                        <ul class="outcomes">
+                            <li>Built durable webhook storage, duplicate-event protection, and recovery paths.</li>
+                            <li>Bridged existing credentials into new authentication without password resets.</li>
+                            <li>Preserved Rails audit history and added deployment checks that detect ECS rollbacks.</li>
+                        </ul>
+                        <details>
+                            <summary>More about the migration</summary>
+                            <div class="detail-content">
+                                <p>I separated payment collection from order finalization. Verified webhook signatures, PostgreSQL event storage, transactional worker claims, advisory locks, and completion checks protected processing. Retry and administrative recovery paths addressed interrupted work.</p>
+                                <p>Tracing quote-to-policy behavior exposed separate checkout implementations and changed the delivery sequence. I consolidated shared work and documented the evolving design. By September, payment services, checkout flows, authentication and API foundations, audit compatibility, and deployment infrastructure were implemented; the broader Rails replacement remained underway.</p>
+                            </div>
+                        </details>
+                        <p class="stack">TypeScript / React / Hono / Bun / Rails / PostgreSQL</p>
+                    </article>
+                </div>
+            </section>
 
-            </a>
-        </div>
-        <div class="h-20"></div>
-    </div>
-    <div id="about-me" class="p-4 flex flex-col justify-center items-center">
-        <div class="grid grid-cols-1 max-w-screen-md  text-lg  space-y-6">
-            <div class="space-y-2">
-                <p>💙 Things I like &hellip;</p>
-                <p>
-                    The Web,
-                    Simplicity,
-                    Unix Philosophy,
-                    Domain Driven Design,
-                    Clean-ish Architecture.
-                </p>
-            </div>
-            <div class="space-y-2">
-                <p>🛠️ Tech I'm using &hellip;</p>
-                <p> TypeScript, React,
-                    Node.js, Express,
-                    React Router, Next.js, Elixir,
-                    Phoenix, Postgres, AWS, Vercel, SST, Tailwind</p>
-            </div>
-            <div class="space-y-2">
-                <p>🖥️ Tech I've used &hellip;</p>
-                <p>Remix, React Native, Ruby, Ruby on Rails, Python, ObjectiveC, Swift, Java, Kotlin, Angular,
-                    MongoDB, MySQL, GraphQL, GIS</p>
-            </div>
-            <div class="space-y-2">
-                <p>💭 Things I like, but haven't used in
-                    production&hellip;yet&hellip;</p>
-                <p>Go, OCaml, Datastar, HTMX</p>
-            </div>
-        </div>
-        <hr class="w-full max-w-screen-md my-6">
-        <div class="grid grid-cols-1 md:grid-cols-2  w-full max-w-screen-md my-6 space-y-6 md:space-y-0">
-            <p>💬 Get in touch! <a class="text-[#c6d0f5]" href="mailto:carlyleec@gmail.com">carlyleec@gmail.com</a></p>
-            <a class="text-[#c6d0f5] md:text-right" download href="/cameron-carlyle-resume.pdf">🤓
-                Download
-                resumé</a>
-        </div>
+            <section id="experience" class="section" aria-labelledby="experience-title">
+                <div class="section-heading">
+                    <p class="eyebrow">The path so far</p>
+                    <h2 id="experience-title">A little background.</h2>
+                    <p>13 years building software across finance, healthcare, insurance, logistics, ecommerce, and civic data.</p>
+                </div>
+                <div class="experience-list">
+                    <article class="job">
+                        <p class="eyebrow">2021–present / 2017–2020</p>
+                        <div><h3>Objective</h3><p class="role">Senior Developer / previously Developer</p><p>Architecture, technical delivery, and hands-on development for client applications. Work spanning web and mobile products, financial calculations, enterprise integrations, and production infrastructure.</p></div>
+                    </article>
+                    <article class="job">
+                        <p class="eyebrow">2020–2021</p>
+                        <div><h3>A climbing interlude</h3><p>Built climbing-wall maps and activity features at Pebble in early 2020. Then traveled around the country climbing, June 2020 through April 2021.</p></div>
+                    </article>
+                    <article class="job">
+                        <p class="eyebrow">2017</p>
+                        <div><h3>Grow.com</h3><p class="role">Software Engineer</p><p>Built product features with React and PostgreSQL and developed a companion Chrome extension.</p></div>
+                    </article>
+                    <article class="job">
+                        <p class="eyebrow">2014–2017</p>
+                        <div><h3>City of Asheville</h3><p class="role">Software Developer / Civic &amp; GIS Programmer</p><p>Made civic data more accessible to residents and city employees. Built public and internal applications, replaced a critical web service, and laid the groundwork for a React and GraphQL migration.</p></div>
+                    </article>
+                    <article class="job">
+                        <p class="eyebrow">2013–2014</p>
+                        <div><h3>Locus Technologies</h3><p class="role">Software Engineer</p><p>Rebuilt an environmental application for the web and developed a custom GIS API and interactive map.</p></div>
+                    </article>
+                    <p class="earlier">Before software: geography research and teaching at Appalachian State, logistics, and service in the U.S. Army.</p>
+                    <a class="text-link" href="cameron-carlyle-resume.pdf" download>Download my full résumé <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></svg></a>
+                </div>
+            </section>
+
+            <section id="about-me" class="section" aria-labelledby="approach-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Approach &amp; tools</p>
+                    <h2 id="approach-title">Keep it simple.</h2>
+                    <p>I like the web, simple systems, and tools that earn their place.</p>
+                </div>
+                <div class="approach-grid">
+                    <div class="principles">
+                        <h3>How I build</h3>
+                        <p>Start with the business rules. Use domain-driven design to give them clear names and boundaries. Organize features with Vertical Slice Architecture so related behavior stays together.</p>
+                        <p>Keep the Unix philosophy close: small pieces with clear responsibilities. Make changes incremental, test the important behavior, and plan for what happens when something fails.</p>
+                    </div>
+                    <div class="toolkit">
+                        <h3>Current toolkit</h3>
+                        <dl>
+                            <dt>Frontend</dt><dd>TypeScript, React, TanStack, Next.js, Remix, Tailwind</dd>
+                            <dt>Backend</dt><dd>Elixir, Phoenix, LiveView, Node.js, Hono, Bun, PostgreSQL</dd>
+                            <dt>Infrastructure</dt><dd>AWS, CloudFormation, ECS, Docker, GitHub Actions</dd>
+                        </dl>
+                        <details>
+                            <summary>Also worked with</summary>
+                            <p class="detail-content">React Native, Ruby on Rails, Python, Swift, Objective-C, Java, Kotlin, Angular, Express, MongoDB, MySQL, GraphQL, and GIS.</p>
+                        </details>
+                    </div>
+                </div>
+                <section class="exploring" aria-labelledby="exploring-title">
+                    <h3 id="exploring-title">Exploring</h3>
+                    <div class="exploring-grid">
+                        <article>
+                            <h4>Go</h4>
+                            <p>Go’s simplicity, static typing, and performance make it a language I’m excited to work with. I spent substantial time exploring it and evaluating it for agency projects. Its small surface area and straightforward tooling fit the way I like to build software.</p>
+                            <p>For our agency’s needs at the time, the team’s familiarity with TypeScript and the libraries and integrations we already relied on made our existing stack the more practical choice. I haven’t used Go in production yet, but I came away from that exploration wanting to. I’d love to work with it professionally.</p>
+                        </article>
+                        <article>
+                            <h4>Datastar &amp; hypermedia</h4>
+                            <p>Years of maintaining legacy applications have made me acutely aware of the cost of dependency churn, especially in the React ecosystem. React is still my go-to for most projects because it gives me the capabilities to build the interfaces clients need. But I’m increasingly interested in how much I can do with fewer dependencies.</p>
+                            <p>I keep coming back to the idea of a “100-year web app”: software built on durable web foundations, with less to replace just to keep it running. This site is a small expression of that idea. Just HTML, CSS, and a few good fonts.</p>
+                            <p>Datastar and hypermedia appeal to me as a way to bring that same restraint to richer, interactive applications. I want to explore how far I can take an interface with HTML, server-driven updates, and one small frontend dependency. I haven’t used Datastar in production yet, but I’m excited to do more with less.</p>
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer><p>Cameron Carlyle / Fayetteville, West Virginia</p><p>Just HTML, CSS, and a few good fonts.</p></footer>
     </div>
 </body>
-
 </html>
